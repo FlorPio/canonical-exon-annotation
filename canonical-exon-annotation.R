@@ -72,7 +72,7 @@ exons_df <- data.frame(
   
 )
 
-missing_transcripts <- setdiff(mane_data$RefSeq_nuc, names(exons_mane))
+
 # Show result
 head(exons_df)
 
@@ -80,4 +80,4 @@ head(exons_df)
 write.csv(exons_df, "exons_mane.csv", row.names = FALSE)
 
 # Save the data frame as a txt object 
-write.table(exons_df, "exons_mane.txt", row.names = FALSE)
+write.table(exons_df, "exons_mane.txt", row.names = FALSE, quote = FALSE, sep = "\t")
